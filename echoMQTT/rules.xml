@@ -1,0 +1,69 @@
+<rules>
+  <publish>
+    <node>IPADDRESS</node>
+    <eoj>001101</eoj>
+
+    <property>
+      <epc>E0</epc>
+      <name>temperature</name>
+      <converter>
+        <class>Float</class>
+        <param name="size">2</param>
+        <param name="divide">10</param>
+      </converter>
+    </property>
+
+    <interval>30000</interval>
+    <topic>devices/[NODE]/[EOJ]</topic>
+  </publish>
+
+  <publish>
+    <node>IPADDRESS</node>
+    <eoj>001201</eoj>
+
+    <property>
+      <epc>E0</epc>
+      <name>humidity</name>
+      <converter>
+        <class>Integer</class>
+        <param name="unsigned">true</param>
+        <param name="size">1</param>
+      </converter>
+    </property>
+
+    <interval>30000</interval>
+    <topic>devices/[NODE]/[EOJ]</topic>
+  </publish>
+
+  <publish>
+    <node>IPADDRESS</node>
+    <eoj>002d01</eoj>
+
+    <property>
+      <epc>E0</epc>
+      <name>airpressure</name>
+      <converter>
+        <class>Float</class>
+        <param name="size">2</param>
+        <param name="divide">10</param>
+      </converter>
+    </property>
+
+    <interval>30000</interval>
+    <topic>devices/[NODE]/[EOJ]</topic>
+  </publish>
+
+  <subscribe>
+    <node>IPADDRESS</node>
+    <eoj>029001</eoj>
+    <property>
+      <epc>80</epc>
+      <name>lighting</name>
+      <converter>
+        <class>Map</class>
+        <param name="mapping">{"ON":"30","OFF":"31"}</param>
+      </converter>
+    </property>
+    <topic>control/lighting/set</topic>
+  </subscribe>
+</rules>

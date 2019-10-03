@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+  <object ceoj="0290">
+    <property epc="80" set="enabled" notify="enabled">
+      <command>
+        <get>./lighting_get.sh</get>
+        <set>./lighting_set.sh</set>
+      </command>
+    </property>
+  </object>
+</device>

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NUM=26
+NUM=13
 
 if [ \! -d /sys/class/gpio/gpio${NUM} ]; then
   echo ${NUM} > /sys/class/gpio/export

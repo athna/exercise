@@ -3,8 +3,40 @@
   <object ceoj="0290">
     <property epc="80" set="enabled" notify="enabled">
       <command>
-        <get>./lighting_get.sh</get>
-        <set>./lighting_set.sh</set>
+        <get>./lighting_get_6.sh</get>
+        <set>./lighting_set_6.sh</set>
+      </command>
+    </property>
+  </object>
+  <object ceoj="0290">
+    <property epc="80" set="enabled" notify="enabled">
+      <command>
+        <get>./lighting_get_13.sh</get>
+        <set>./lighting_set_13.sh</set>
+      </command>
+    </property>
+  </object>
+  <object ceoj="0290">
+    <property epc="80" set="enabled" notify="enabled">
+      <command>
+        <get>./lighting_get_19.sh</get>
+        <set>./lighting_set_19.sh</set>
+      </command>
+    </property>
+  </object>
+  <object ceoj="0290">
+    <property epc="80" set="enabled" notify="enabled">
+      <command>
+        <get>./lighting_get_26.sh</get>
+        <set>./lighting_set_26.sh</set>
+      </command>
+    </property>
+  </object>
+  <object ceoj="0290">
+    <property epc="80" set="enabled" notify="enabled">
+      <command>
+        <get>./lighting_get_21.sh</get>
+        <set>./lighting_set_21.sh</set>
       </command>
     </property>
   </object>

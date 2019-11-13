@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NUM=26
+NUM=21
 
 if [ \! -d /sys/class/gpio/gpio${NUM} ]; then
   echo ${NUM} > /sys/class/gpio/export
@@ -8,10 +8,10 @@ if [ \! -d /sys/class/gpio/gpio${NUM} ]; then
   echo out > /sys/class/gpio/gpio${NUM}/direction
 fi
 
-VALUE=`cat /sys/class/gpio/gpio${NUM}/value`
+DATA="$3"
 
-if [ $VALUE -eq 1 ]; then
-  echo 30
-else
-  echo 31
+if [ ${DATA} = '30' ]; then
+  echo 1 > /sys/class/gpio/gpio${NUM}/value
+elif [ ${DATA} = '31' ]; then
+  echo 0 > /sys/class/gpio/gpio${NUM}/value
 fi

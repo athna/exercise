@@ -1,6 +1,5 @@
 <rules>
-  <publish>
-    <node>IPADDRESS</node>
+  <publish get="enabled" notify="enabled">
     <eoj>001101</eoj>
 
     <property>
@@ -13,12 +12,16 @@
       </converter>
     </property>
 
+    <property>
+      <epc>88</epc>
+      <name>failure</name>
+    </property>
+
     <interval>30000</interval>
     <topic>devices/[NODE]/[EOJ]</topic>
   </publish>
 
-  <publish>
-    <node>IPADDRESS</node>
+  <publish get="enabled" notify="enabled">
     <eoj>001201</eoj>
 
     <property>
@@ -31,12 +34,16 @@
       </converter>
     </property>
 
+    <property>
+      <epc>88</epc>
+      <name>failure</name>
+    </property>
+
     <interval>30000</interval>
     <topic>devices/[NODE]/[EOJ]</topic>
   </publish>
 
-  <publish>
-    <node>IPADDRESS</node>
+  <publish get="enabled" notify="enabled">
     <eoj>002d01</eoj>
 
     <property>
@@ -49,12 +56,16 @@
       </converter>
     </property>
 
+    <property>
+      <epc>88</epc>
+      <name>failure</name>
+    </property>
+
     <interval>30000</interval>
     <topic>devices/[NODE]/[EOJ]</topic>
   </publish>
 
   <subscribe>
-    <node>IPADDRESS</node>
     <eoj>029001</eoj>
     <property>
       <epc>80</epc>
@@ -64,6 +75,59 @@
         <param name="mapping">{"ON":"30","OFF":"31"}</param>
       </converter>
     </property>
-    <topic>control/lighting/set</topic>
+    <topic>control/lighting/029001/set</topic>
   </subscribe>
+
+  <subscribe>
+    <eoj>029002</eoj>
+    <property>
+      <epc>80</epc>
+      <name>lighting</name>
+      <converter>
+        <class>Map</class>
+        <param name="mapping">{"ON":"30","OFF":"31"}</param>
+      </converter>
+    </property>
+    <topic>control/lighting/029002/set</topic>
+  </subscribe>
+
+  <subscribe>
+    <eoj>029003</eoj>
+    <property>
+      <epc>80</epc>
+      <name>lighting</name>
+      <converter>
+        <class>Map</class>
+        <param name="mapping">{"ON":"30","OFF":"31"}</param>
+      </converter>
+    </property>
+    <topic>control/lighting/029003/set</topic>
+  </subscribe>
+
+  <subscribe>
+    <eoj>029004</eoj>
+    <property>
+      <epc>80</epc>
+      <name>lighting</name>
+      <converter>
+        <class>Map</class>
+        <param name="mapping">{"ON":"30","OFF":"31"}</param>
+      </converter>
+    </property>
+    <topic>control/lighting/029004/set</topic>
+  </subscribe>
+
+  <subscribe>
+    <eoj>029005</eoj>
+    <property>
+      <epc>80</epc>
+      <name>lighting</name>
+      <converter>
+        <class>Map</class>
+        <param name="mapping">{"ON":"30","OFF":"31"}</param>
+      </converter>
+    </property>
+    <topic>control/lighting/029005/set</topic>
+  </subscribe>
+
 </rules>
